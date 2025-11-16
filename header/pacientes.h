@@ -17,5 +17,5 @@ typedef struct Paciente
 
 // Lucas - função para criar paciente
 Paciente* criarPaciente(int id, char*nome, int idade, char*sintoma); 
-
+Paciente* buscarPacientePorID(Paciente *lista, int id);
 #endif

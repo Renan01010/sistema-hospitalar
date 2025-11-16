@@ -22,3 +22,17 @@ Paciente* criarPaciente(int id, char*nome, int idade, char*sintoma){
     p->prox = NULL; //inicializa o próximo paciente como NULL
     return p; 
 }
+
+Paciente* buscarPacientePorID(Paciente *lista, int id)
+{
+    Paciente *atual = lista;
+
+    while (atual != NULL) {
+        if (atual->id == id) {
+            return atual;  // encontrou o paciente
+        }
+        atual = atual->prox;
+    }
+
+    return NULL; // não encontrou
+}

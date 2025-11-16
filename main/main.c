@@ -8,6 +8,7 @@
 
 int main()
 {
+
     Fila pacientes;
     FilaAtendido pacientes2;
     inicializar(&pacientes);

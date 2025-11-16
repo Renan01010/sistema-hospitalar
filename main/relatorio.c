@@ -30,7 +30,7 @@ void tempoMedio(FilaAtendido *fa, int numero)
         printf("ninguem foi atendido nesta prioridade, entao o tempo medio eh 0");
         return;
     }
-    int media = fa->somaTempos[numero] / fa->totalAtendidos[numero];
+    int media = fa->somaTempo[numero] / fa->tamanho[numero];
     printf("Tempo médio de atendimento da prioridade %d = %d minutos\n", numero, media);
     
 }
