@@ -5,8 +5,8 @@
 #include "fila.h"
 
 //Prototipo das funções
-void atendimentoPrioridade(Fila *f);
-void tempoMedio(Fila *f, Paciente *p);
+void atendimentoPrioridade(FilaAtendido *fa);
+void tempoMedio(FilaAtendido *fa, int numero);
 void pacientesPorNivel(FilaAtendido* fa);
 
 #endif
