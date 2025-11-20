@@ -2,6 +2,7 @@
 #define FILA_H
 
 #include <stdbool.h>
+#include "pacientes.h"
 
 //estrutura da fila
 typedef struct {
@@ -15,16 +16,19 @@ typedef struct {
     Paciente* fim[5];
     int tamanho[5];
     int somaTempo[5];
+    int totalAtendimentos[5];
 }FilaAtendido;
 
 
 //protótipo das funções
 void inicializar(Fila *paciente);
+void inicializarAtendido(FilaAtendido *fa);
 bool vazia(Fila *f);
 bool enfileirar(Fila *f, Paciente *p);
 void adicionarAtendido(FilaAtendido *fa, Paciente *p);
-bool pacienteAtendido(Fila *f);
+bool pacienteAtendido(Fila *f, FilaAtendido *fa);
 int tamanho_fila(Fila *f);
+bool frente(Fila *f, int prioridade);
 void exibir(Fila *f);
 void limpar(Fila *f);
 
