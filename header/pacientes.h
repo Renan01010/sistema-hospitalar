@@ -15,7 +15,15 @@ typedef struct Paciente
     int tempoAtendimento; // em minutos
 }Paciente;
 
+typedef struct Lista{
+    Paciente *inicio;
+}Lista;
+
+// Lista global de pacientes: inicializar/adicionar/buscar
+void inicializarLista(void);
+void adicionarPacienteLista(Paciente *p);
+Paciente* buscarPacientePorID(int id);
+
 // Lucas - função para criar paciente
-Paciente* criarPaciente(int id, char*nome, int idade, char*sintoma); 
-Paciente* buscarPacientePorID(Paciente *lista, int id);
+Paciente* criarPaciente(int id, char*nome, int idade, char*sintoma);
 #endif
