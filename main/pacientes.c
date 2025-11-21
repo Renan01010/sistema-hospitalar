@@ -23,7 +23,7 @@ Paciente* criarPaciente(int id, char*nome, int idade, char*sintoma){
     strcpy(p->nome, nome);//copia o nome para o atributo nome do paciente
     p->idade = idade; //atribui idade
     strcpy(p->sintoma, sintoma); // copia o sintoma para o atributo sintoma do paciente
-    p->prioridade = 0; //inicializa prioridade como 0
+    p->prioridade = -1; //inicializa prioridade como 0
     p->tempoAtendimento = 0;
     p->prox = NULL; //inicializa o próximo paciente como NULL
     // adiciona o paciente à lista global de pacientes
