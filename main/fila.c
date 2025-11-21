@@ -50,6 +50,7 @@ bool enfileirar(Fila *f, Paciente *p){
     f->tamanho[prioridade]++; // incrementa o tamanho da fila
     return true;
 }
+//adiciona na fila de atendidos - Kauan
 void adicionarAtendido(FilaAtendido *fa, Paciente *p){
     int pr = p->prioridade - 1;
     p->prox = NULL;
@@ -161,4 +162,17 @@ void limpar(Fila *f){
     inicializar(f);
     printf("fila limpa!");
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 

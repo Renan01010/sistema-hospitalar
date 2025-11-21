@@ -9,11 +9,11 @@ int atribuirPrioridade(Fila *f, int id)
 {
     // Primeiro, buscar na lista global de pacientes
     Paciente *p = buscarPacientePorID(id);
-    if(p->prioridade != 1){
-        printf("Paciente ja passou pela triagem");
-        return -1;
-    }
     if (p != NULL) {
+        if (p->prioridade != -1) {
+            printf("Paciente ja passou pela triagem\n");
+            return -1;
+        }
         printf("\nSintoma do paciente %s: %s\n", p->nome, p->sintoma);
         printf("Doutor, atribua a prioridade (1 a 5):\n");
         int prioridade;
